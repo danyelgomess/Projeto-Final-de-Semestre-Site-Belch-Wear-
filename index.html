@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BELCH</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/belch_wear_transparent.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#" class="nav-logo">
+        <img class="logo-img" src="images/belch_wear_transparent.png" alt="Logo Belch Wear">
+      </a>
+
+      <ul class="nav-menu">
+        <i id="close-menu-button" class="fa-solid fa-xmark"></i>
+        <li role="button" class="nav-item"><a href="#" class="nav-link">INÍCIO</a></li>
+        <li role="button" class="nav-item"><a href="#produtos" class="nav-link">PRODUTOS</a></li>
+        <li role="button" class="nav-item"><a href="#contact" class="nav-link">CONTATO</a></li>
+        <li role="button" class="nav-item"><a href="login.html" class="nav-link">LOGIN</a></li>
+      </ul>
+
+      <i id="open-menu-button" class="fa-solid fa-bars"></i>
+    </nav>
+  </header>
+
+  <!--popup de coockie -->
+  <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
+  <script> window.start.init({
+      Palette: "palette6", Mode: "floating right", Theme: "classic",
+      Message: "Este site utiliza de cookies para uma melhor experiência do usuário.", ButtonText: "ok :)", LinkText: "Saiba Mais", Location: "https://www.cookiesandyou.com", Time: "5",
+    })</script>
+
+  <!-- vlibras-->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- Sessão Hero -->
+  <section class="hero-section">
+    <div class="section-container">
+      <div class="hero-container">
+        <div class="hero-details">
+          <h2 class="hero-title">BELCH</h2>
+          <h3 class="hero-subtitle">Roupa com história, estilo com atitude</h3>
+          <p class="hero-description">Trabalho do semestre desenvolvido por alunos daUNINOVE Vila Prudente do curso de
+            ADS (Análise e Desenvolvimento de Sistemas).</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<hr>
+  <!-- sessão Camisetas -->
+ <section class="menu-section" id="produtos">
+    <h2 class="section-title">Camisetas</h2>
+    <div class="grid-produtos">
+        <div class="card-produto">
+            <div class="imagem">
+                <img src="images/SPC-trustF.png" class="normal">
+                <img src="images/spc-trust (2).png" class="hover">
+            </div>
+            <h3>Camiseta SPC - Trust</h3>
+            <p>R$100,00</p>
+            <button>COMPRAR</button>
+        </div>
+
+        <div class="card-produto">
+            <div class="imagem">
+                <img src="images/chronic-frente.png" class="normal">
+                <img src="images/chronic-costas.png" class="hover">
+            </div>
+            <h3>Camiseta Chronic</h3>
+            <p>R$100,00</p>
+            <button>COMPRAR</button>
+        </div>
+
+        <div class="card-produto">
+            <div class="imagem">
+                <img src="images/Sewer-carp-frente.webp" class="normal">
+                <img src="images/Sewer-carp.webp" class="hover">
+            </div>
+            <h3>Camiseta Sewer Carp</h3>
+            <p>R$100,00</p>
+            <button>COMPRAR</button>
+        </div>
+    </div>
+</section>
+<hr>
+    <!-- sessão Tênis -->
+ <section class="testimonial" id="tenis">
+    <h2 class="section-title">Tênis</h2>
+    <div class="section-container">
+        <div class="testimonial-container swiper">
+            <div class="slide-wrapper">
+                <div class="card-list swiper-wrapper">
+                    
+                    <div class="card-item swiper-slide">
+                        <div class="imagem">
+                            <img src="images/AM-95.png" class="normal" alt="Air Max 95">
+                            <img src="images/AM-95-2.png" class="hover" alt="Air Max 95">
+                        </div>
+                        <h3 class="user-name">Air Max 97</h3>
+                        <p class="user-thoughts">R$499,99</p>
+                        <button>COMPRAR</button>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <div class="imagem">
+                            <img src="images/ADI-2000.png" class="normal" alt="ADI 2000">
+                            <img src="images/ADI-2000-2.png" class="hover" alt="ADI 2000">
+                        </div>
+                        <h3 class="user-name">ADI 2000</h3>
+                        <p class="user-thoughts">R$399,99</p>
+                        <button>COMPRAR</button>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <div class="imagem">
+                            <img src="images/TN-25TH.png" class="normal" alt="Air Max TN">
+                            <img src="images/TN-25TH-2.png" class="hover" alt="Air Max TN">
+                        </div>
+                        <h3 class="user-name">Air Max TN</h3>
+                        <p class="user-thoughts">R$899,99</p>
+                        <button>COMPRAR</button>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <div class="imagem">
+                            <img src="images/AM-95.png" class="normal" alt="Air Max 97">
+                            <img src="images/AM-95-2.png" class="hover" alt="Air Max 97">
+                        </div>
+                        <h3 class="user-name">Air Max 97</h3>
+                        <p class="user-thoughts">R$499,99</p>
+                        <button>COMPRAR</button>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <div class="imagem">
+                            <img src="images/ADI-2000.png" class="normal" alt="ADI 2000X">
+                            <img src="images/ADI-2000-2.png" class="hover" alt="ADI 2000X">
+                        </div>
+                        <h3 class="user-name">ADI 2000</h3>
+                        <p class="user-thoughts">R$399,99</p>
+                        <button>COMPRAR</button>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <div class="imagem">
+                            <img src="images/TN-25TH.png" class="normal" alt="Air Max TN">
+                            <img src="images/TN-25TH-2.png" class="hover" alt="Air Max TN ">
+                        </div>
+                        <h3 class="user-name">Air Max TN1</h3>
+                        <p class="user-thoughts">R$899,99</p>
+                        <button>COMPRAR</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Botões e Paginação -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+    </div>
+</section>
+<hr>
+    <!-- sessão da Galeria -->
+    <section class="gallery" id="Galeria">
+      <h2 class="section-title">Galeria</h2>
+      <div class="section-container">
+        <div class="gallery-list">
+          <div class="gallery-items">
+            <img src="images/fit-1 (1).jpg" alt="Imagem Galeria" class="gallery-image">
+          </div>
+          <div class="gallery-items">
+            <img src="images/fit-2.jpg" alt="Imagem Galeria" class="gallery-image">
+          </div>
+          <div class="gallery-items">
+            <img src="images/fit-3.jpg" alt="Imagem Galeria" class="gallery-image">
+          </div>
+          <div class="gallery-items">
+            <img src="images/fit-4.jpg" alt="Imagem Galeria" class="gallery-image">
+          </div>
+          <div class="gallery-items">
+            <img src="images/fit-5.jpg" alt="Imagem Galeria" class="gallery-image">
+          </div>
+          <div class="gallery-items">
+            <img src="images/fit-6.jpg" alt="Imagem Galeria" class="gallery-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sessão contato -->
+    <section class="contact" id="contact">
+      <h2 class="section-title">Entre em Contato</h2>
+      <div class="section-container">
+        <div class="contact-container">
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <p>Av. Professor Luiz Ignácio Anhaia Mello, 1363 - Vila Prudente, São Paulo - SP, 03155-000</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-envelope"></i>
+              <p>belchwear01@gmail.com</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <p>(xx) xxxxx-xxxx</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-clock"></i>
+              <p>Segunda - Sexta: 8:00 AM - 6:00 PM</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-clock"></i>
+              <p>Sábado: 10:00 AM - 3:00 PM</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-clock"></i>
+              <p>Domingo: Fechado</p>
+            </div>
+            <div class="contact-item">
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form action="mailto:belchwear01@gmail.com" method="POST" enctype="text/plain">
+              <input type="text" placeholder="Nome" required>
+              <input type="email" placeholder="Email" required>
+              <textarea placeholder="Escreva sua Mensagem" required></textarea>
+              <button type="submit" class="button form-button">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="section-container">
+        <div class="footer-section">
+          <div class="footer-copyright">
+            <p>© 2025 Yuri Santiago</p>
+          </div>
+          <div class="footer-social-media">
+            <div class="social-icon">
+              <a><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://github.com/Yurisntz"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-policies">
+            <a href="#">Políticas de Privacidade</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
