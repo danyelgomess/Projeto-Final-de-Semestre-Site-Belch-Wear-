@@ -1,286 +1,911 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BELCH</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="images/belch_wear_transparent.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Danyel Moreira, Dev Ops - AWS">
+    <title>Danyel Moreira - Portfolio</title>   
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
-
-<body>
-
-  <header class="header" id="header">
-    <nav class="nav">
-      <a href="#" class="nav-logo">
-        <img class="logo-img" src="images/belch_wear_transparent.png" alt="Logo Belch Wear">
-      </a>
-
-      <ul class="nav-menu">
-        <i id="close-menu-button" class="fa-solid fa-xmark"></i>
-        <li role="button" class="nav-item"><a href="#" class="nav-link">INÍCIO</a></li>
-        <li role="button" class="nav-item"><a href="#produtos" class="nav-link">PRODUTOS</a></li>
-        <li role="button" class="nav-item"><a href="#contact" class="nav-link">CONTATO</a></li>
-        <li role="button" class="nav-item"><a href="login.html" class="nav-link">LOGIN</a></li>
-      </ul>
-
-      <i id="open-menu-button" class="fa-solid fa-bars"></i>
-    </nav>
-  </header>
-
-  <!--popup de coockie -->
-  <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
-  <script> window.start.init({
-      Palette: "palette6", Mode: "floating right", Theme: "classic",
-      Message: "Este site utiliza de cookies para uma melhor experiência do usuário.", ButtonText: "ok :)", LinkText: "Saiba Mais", Location: "https://www.cookiesandyou.com", Time: "5",
-    })</script>
-
-  <!-- vlibras-->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-
-  <!-- Sessão Hero -->
-  <section class="hero-section">
-    <div class="section-container">
-      <div class="hero-container">
-        <div class="hero-details">
-          <h2 class="hero-title">BELCH</h2>
-          <h3 class="hero-subtitle">Roupa com história, estilo com atitude</h3>
-          <p class="hero-description">Trabalho do semestre desenvolvido por alunos da UNINOVE Vila Prudente do curso de
-            ADS (Análise e Desenvolvimento de Sistemas).</p>
+<body class="bg-black text-white font-sans">
+    <header class="bg-black shadow-sm sticky top-0 z-50 border-b" style="border-color: #FF9900 !important;">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold gradient-text">Danyel Moreira</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-yellow-500 transition">Sobre</a>
+                <a href="#skills" class="hover:text-yellow-500 transition">Habilidades</a>
+                <a href="#projects" class="hover:text-yellow-500 transition">Portfólio</a>
+                <a href="#education" class="hover:text-yellow-500 transition">Formação</a>
+                <a href="#contact" class="hover:text-yellow-500 transition">Contato</a>
+            </nav>
+            <button class="md:hidden" aria-label="Abrir menu">
+                <i data-feather="menu"></i>
+            </button>
         </div>
+    </header>
 
-      </div>
-    </div>
-  </section>
-
-<hr>
-  <!-- sessão Camisetas -->
- <section class="menu-section" id="produtos">
-    <h2 class="section-title">Camisetas</h2>
-    <div class="grid-produtos">
-        <div class="card-produto">
-            <div class="imagem">
-                <img src="images/SPC-trustF.png" class="normal">
-                <img src="images/spc-trust (2).png" class="hover">
+    <section class="py-20 bg-gradient-to-r from-black to-gray-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" style="color: #FF9900;">Danyel Moreira</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 gradient-text">Dev Ops - Dev Full Stack - AWS</h2>
+                <p class="text-lg mb-8 text-gray-400">Soluções práticas e experiência em ambientes corporativos com foco em desenvolvimento em nuvem e desenvolvimento full stack.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-6 py-3 rounded-lg transition text-white btn-glow" style="background-color: #FF9900;" aria-label="Ir para seção de contato">Contato</a>
+                    <a href="#projects" class="px-6 py-3 rounded-lg transition text-white btn-glow" style="background-color: #FF9900;" aria-label="Ir para seção de projetos">Projetos</a>
+                    <button id="terminalBtn" class="px-6 py-3 rounded-lg transition text-white btn-glow terminal-btn" aria-label="Abrir Terminal AWS"><span class="terminal-led"></span>>_ Terminal</button>
+                </div>
             </div>
-            <h3>Camiseta SPC - Trust</h3>
-            <p>R$100,00</p>
-            <button>COMPRAR</button>
-        </div>
-
-        <div class="card-produto">
-            <div class="imagem">
-                <img src="images/chronic-frente.png" class="normal">
-                <img src="images/chronic-costas.png" class="hover">
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <div class="hero-image-container">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-gray-800 rounded-full overflow-hidden shadow-xl">
+                        <img src="img/danyel.png" alt="Danyel Moreira" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 rounded-full mr-2" style="background-color: #FF9900;"></div>
+                            <span class="text-sm font-medium text-black">Disponível</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h3>Camiseta Chronic</h3>
-            <p>R$100,00</p>
-            <button>COMPRAR</button>
         </div>
+    </section>
 
-        <div class="card-produto">
-            <div class="imagem">
-                <img src="images/Sewer-carp-frente.webp" class="normal">
-                <img src="images/Sewer-carp.webp" class="hover">
+    <section id="about" class="py-16 bg-black border-t border-b" style="border-color: #FF9900 !important;">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center" style="color: #FF9900;" data-aos="fade-up">Sobre Mim</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-8 rounded-xl shadow-sm text-white" data-aos="fade-up">
+                    <p class="mb-6 text-lg">
+                        Sou estudante de Análise e Desenvolvimento de Sistemas com experiência prática em desenvolvimento Full Stack, computação em nuvem e práticas DevOps, adquirida por meio de projetos acadêmicos, laboratórios e desafios voltados para o desenvolvimento e implantação de aplicações.
+                    </p>
+                    <p class="mb-6 text-lg">
+                        Possuo experiência no desenvolvimento de aplicações web, integração com bancos de dados, criação de APIs e hospedagem de sistemas em ambiente cloud. Também tenho vivência com AWS, atuando na criação e configuração de infraestrutura em nuvem, deploy de aplicações, monitoramento e aplicação de boas práticas de segurança. Entre os projetos desenvolvidos, destaco a hospedagem e publicação do site Web Café e o desenvolvimento de uma plataforma de agendamento para a Barbearia Sant's.
+                    </p>
+                    <p class="text-lg">
+                        Atualmente, busco oportunidades como Desenvolvedor Full Stack ou DevOps, contribuindo na criação, implantação e manutenção de aplicações escaláveis, seguras e confiáveis, aplicando conhecimentos em desenvolvimento de software, automação, infraestrutura e computação em nuvem para gerar valor aos negócios.
+                    </p>
+                </div>
             </div>
-            <h3>Camiseta Sewer Carp</h3>
-            <p>R$100,00</p>
-            <button>COMPRAR</button>
         </div>
+    </section>
+
+    <section id="skills" class="py-16 bg-black border-t border-b" style="border-color: #FF9900 !important;">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center" style="color: #FF9900;" data-aos="fade-up">
+                Habilidades <span class="gradient-text">Técnicas</span>
+            </h2>
+            <div class="mb-16" data-aos="fade-up">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/nodejs.svg" alt="Node.js Logo" class="w-12 h-12 mr-4" loading="lazy">
+                        <span class="text-lg font-medium text-white">Node.js</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/mysql.svg" alt="MySQL Logo" class="w-12 h-12 mr-4" loading="lazy">
+                        <span class="text-lg font-medium text-white">MySQL</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFUklEQVR4nO1Xa2xURRQeQERUrG1ntoD4woIS8bmdu+UR6967xQooYCxBpSq7Zy4v8REV/0iqxkR8JMZfYkKMiUZC/eEzJEi6Z5YCf6j4iATUKA9jCA+x3XtLA0HWnNlH19Jaomy7Nf2SyXbPvZ39zsx3vjPD2BCGMIR+QadTNZENZniOfGhQJ+E51tpkRC5ngxFts6rLfFse9hz5AhtsSDWy4Z5jbfIdK9VhW0vZYEKqvn6E58j1RN6z5ekTkeBVbLAgVVNzke9YTUTeJODId9mg0rxjJfLI70/WBDk9S9VVjvLDodm+bb3l29ZGzw7dzIoJ7Y6c7Dvypxx52+rww9YtR6dPH+M78nnfsY6mn8kNbTNnlrJiQkc4FPRt+Xse+ZO+I+u82qqpvmPtzdaCZ1srWbGhsyZ0jedYh7rIy9MdtlxA8eyq0250ONY8VozwHLk5S55G0qlaQXGSSi6piFzIihFe7bSA51hn8op2HcVTweBIz5GdGc3vZsWK9khoUn7RZouzw66+Im9X9rLi7rby10wCO3PxuspRxoWysrozOIMVK3xHrjFEbastVV09Oi/+ZtcuyGZW1J3XtvYYohGpuh/kchILyxtZsSI5K3iD78jjpHeSVTbuReSDuV0IW8+wYsYJR05LNzM5NxujZHzbOpJJIsqKHclIaIrvyC/JRrMx37aOkZSOR4IlA8uOMcYhHhRKr+aA7wnATVzh2kBM11au2jQq+05HjTXBd6puM3+HQ/d6jtxHR43uc5UrLQXoJqHwBwEY527ijoIRL3kELxeACaF0Kj3wTF8/aIo7bDUcq7MuM4Sj28YLF2cKhQ1lgBMqFm++xMQUrqc5OeCJUrelMPeGAGB1F/lcEkmu8FsOegsN2hFaUa70J+a70q0C9B6h8CBXujP7P8LV9d1SHSaU3pt5/lhBEjBJKIwIwE856KNnJ9PbwCQH/E4o3MhBN5ZHm6/vaW7RtburWX+Atp5HcZGIYoMAvJ9WVcT0fZRkWSxhlcX0FLECLz2XuUqWt5RypX0jIzc+p+DkJzy1YzTJJLPCDSSBf3p//Mot5QEX5/embw76dTMX6D2sES8oGPHcD7rxOX+TCeABAfoLofAdrvTbNITCDzK1sU8A/pkuUu1xVz/OGlO5RscB5wqlT3PAw4HY1n66YjamhnNARQVMbnSOtXBQAK4TbmIWc1tNjwhAfF5aOriRXIkNBDhsmRyI4eIA4DIB+jkO+hUaAvBZDolYwI0741w0l/p8iBhWCsBVY6PNV7OBAlc6SivIQX8sVuDYriepYUQ64OqbBOiHhdIfUuO7LLajbMDIsvqmERVRnMrdxO0Vy7YHKCQAj+fLxMjBxHqWFQd9iByqX3mXLG8pNZ0ySzb9+TkdH7jCRaZI+9A/FagAvUFA/K6eHGvskq2CK/1aX272r8CV/rrLbbSm9n/WO0v1pADoBdk6IG0b/cd0rXCbr+uLGAe9kOavcOOh856AcY8uCewjCZ2vuSuWbQ8I0C8JwFO0SwWpEVoVrvBIN9//SgC+wQEfELH4DNOgMtbYI+q/v5C7iXHk86Zrp0knhMKTGYvdRfWVn9h5TaI8um1MxiK/6VXr1KyoPtLjAFf4Mw0B2N7L++3k/+UxfU9+YyPbpS7PCgVqOKR3AfgiV/p9rvQ2qhNDGPShPGf6gyv8hVZXKGw2p1TAV8l6TcetbxqRP68AvJUr/ZEA3Ub3hIIlQKtV+mjiSpLFf52qAhLXcsAnyRzS1ou7+uc44baO5ErfzZV+gm5kdEzmLgKdkcpdrDKutKRlIg3quKaOYno2HfwE4MsC8DOu9P6MlE4ZW3Zxfr6U+hGpYYasi/O5i2vMFRH0TgH4o1D4G0kp7TJGXrs56BajfVc/TbezcW7rxQNAeghD+F/gL76ssK8TFCCXAAAAAElFTkSuQmCC" alt="java-coffee-cup-logo--v1" loading="lazy">
+                        <span class="text-lg font-medium text-white">Java</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACHElEQVR4nO2WT0hUURTGz3HUGUSEUNL8FxYmQgWF4UJRRDAQlRYuoqyViButdiUi7WoT0sZoIVorCcHMSKQ0cSEKKZX2oGhhhbQRDZRAxL6483jebjNKEr65A+eDj4Fz7rw5v3nnnXeIRCKRyErBIdhkEgBHACAA+1GsC4YAOLEvGgLg2GMSAEcAIAD7UawLhgA4//uDvOMn3WZuYZhwsZaRlcFIDDCyDzOa6hmLz+IAYLyPEArqHP3hlBCH89YCbC8SCnJ1PJjMKD7mfnqx0tOMXx8sBXg7pOMJCYz3T934l3HC8TzGtSuM9TcW34HJRzqu2mjznT7/cz4OHuKvE2b8QjVj6dW/Xs8CAOXz5eaDGwoymhsZn0bjBGB5knCmOHICBQIuyMac5QDKqsiOFkZqSiTIqROM1RnLATyvTBPu3CBkppsQbZc5tgBq3u8F8Pec/zFL4fnvnc/L8hFATZGGKsbzBzr2ecwEGOnRucd3CSUnI+d99039neQknwAG7lH49e9Nk+tXGT1dhLKzZkuo3UedV/uPF6sqZXybcONrs4TKczqn3ta+AHx8oQF2c+FRvRrc7zDvDDMjJ9NcJZRvtfjYQq/7CWmp0YtXrfCy1+z9zta9gStKoo/SAwNQ/j5FaG9i5B9x57lakxtrGHOD0c/PDBAu1TGKCtx//1CaW/jD24Sthd2m2gEC+GESAEcA4CuASCQSkR/6DRH0JVWM43R/AAAAAElFTkSuQmCC" alt="javascript--v1" loading="lazy">
+                        <span class="text-lg font-medium text-white">JavaScript</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/icons8-github.svg" class="logos" alt="github" loading="lazy"> <span class="text-lg font-medium text-white">GitHub</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/git.svg" alt="git" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">Git</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/Amazon EC2.png" alt="Ec2" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">Amazon EC2</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS Lambda.png" alt="Lambda" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS Lambda</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS Batch.png" alt="Batch" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS Batch</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/Amazon S3.png" alt="S3" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">Amazon S3</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/DynamoDB.png" alt="DynamoDB" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">DynamoDB</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/Amazon Aurora.png" alt="Aurora" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">Amazon Aurora</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/Amazon RDS.png" alt="RDS" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">Amazon RDS</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS API Gateway.png" alt="API Gateway" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS API Gateway</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/Elastic Load Balancer.png" alt="Elastic Load Balancer" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">Elastic Load Balancer</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS IAM.png" alt="IAM" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS IAM</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS CloudTrail.png" alt="CloudTrail" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS CloudTrail</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS CloudWatch.png" alt="CloudWatch" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS CloudWatch</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS WAF.png" alt="WAF" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS WAF</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS Athena.png" alt="Athena" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS Athena</span>
+                    </div>
+                    <div class="tech-card glass-card p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-between">
+                        <img src="img/AWS Budgets.png" alt="Budgets" class="logos" loading="lazy"> <span class="text-lg font-medium text-white">AWS Budgets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOVA SEÇÃO: Dashboard de Portfólio ===== -->
+    <section id="projects" class="py-16 bg-black border-t border-b" style="border-color: #FF9900 !important; padding-top: 5rem;">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-center" style="color: #FF9900;" data-aos="fade-up">Projetos & Laboratórios</h2>
+
+            <!-- Filtros -->
+            <div class="flex justify-center flex-wrap gap-4 mb-12" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="projetos">Projetos Principais</button>
+                <button class="filter-btn" data-filter="labs">Labs AWS & Práticas</button>
+            </div>
+
+            <!-- Grid do Portfólio -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" id="portfolio-grid">
+                
+                <!-- PROJETO: Barbearia -->
+                <div class="portfolio-item glass-card overflow-hidden group flex flex-col h-full" data-category="projetos" data-aos="fade-up">
+                    <div class="relative h-48 sm:h-56 overflow-hidden bg-gray-900 cursor-pointer" onclick="openFullscreen('img/Logo Barbearia.png')">
+                        <img src="img/Logo Barbearia.png" alt="Barbearia Sant's" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i data-feather="zoom-in" class="text-white w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 gradient-text">Barbearia Sant's</h3>
+                        <p class="text-sm text-gray-400 mb-4 flex-grow">Sistema real vendido para agendamento de cortes. Desenvolvido para gerenciar horários, cadastro de clientes e enviar notificações automáticas por e-mail.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge-sm">Supabase</span>
+                            <span class="tech-badge-sm">TypeScript</span>
+                            <span class="tech-badge-sm">JavaScript</span>
+                        </div>
+
+                        <!-- Botões explícitos na base -->
+                        <div class="flex gap-3 mt-auto">
+                            <a href="https://barbearia-sants.vercel.app/" target="_blank" class="flex-1 text-center py-2 bg-[#FF9900] text-black font-bold rounded-lg hover:bg-[#e68900] transition text-sm">Site Ao Vivo</a>
+                            <a href="https://github.com/danyelgomess/barbearia-sants" target="_blank" class="flex-1 text-center py-2 border border-[#FF9900] text-[#FF9900] font-bold rounded-lg hover:bg-[#FF9900] hover:text-black transition text-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO: AgileSUS -->
+                <div class="portfolio-item glass-card overflow-hidden group flex flex-col h-full" data-category="projetos" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-48 sm:h-56 overflow-hidden bg-gray-900 cursor-pointer" onclick="openFullscreen('img/diagrama_final.png')">
+                        <img src="img/diagrama_final.png" alt="AgileSUS" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i data-feather="zoom-in" class="text-white w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 gradient-text">AgileSUS (2026)</h3>
+                        <p class="text-sm text-gray-400 mb-4 flex-grow">Projeto teórico para automatizar o gerenciamento de filas do SUS visando escalabilidade e redução do tempo de espera com computação serverless.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge-sm">AWS SQS</span>
+                            <span class="tech-badge-sm">Lambda</span>
+                            <span class="tech-badge-sm">DynamoDB</span>
+                            <span class="tech-badge-sm">API Gateway</span>
+                        </div>
+
+                        <div class="flex gap-3 mt-auto">
+                            <a href="https://www.canva.com/design/DAHAeqvR8G8/qHXMbW592weMHnuQjKI0wg/edit" target="_blank" class="flex-1 text-center py-2 bg-[#FF9900] text-black font-bold rounded-lg hover:bg-[#e68900] transition text-sm">Ver Apresentação</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO: Belch Wear -->
+                <div class="portfolio-item glass-card overflow-hidden group flex flex-col h-full" data-category="projetos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-48 sm:h-56 overflow-hidden bg-gray-900 flex items-center justify-center cursor-pointer" onclick="openFullscreen('img/logo belch.png')">
+                        <img src="img/logo belch.png" alt="Belch Wear" class="max-h-36 w-auto transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i data-feather="zoom-in" class="text-white w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 gradient-text">Belch Wear</h3>
+                        <p class="text-sm text-gray-400 mb-4 flex-grow">E-commerce responsivo de roupas streetwear. Layout moderno com navegação intuitiva, desenvolvido como trabalho final de semestre.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge-sm">HTML5</span>
+                            <span class="tech-badge-sm">CSS3</span>
+                            <span class="tech-badge-sm">JavaScript</span>
+                        </div>
+
+                        <div class="flex gap-3 mt-auto">
+                            <a href="https://projeto-final-de-semestre-site-belc.vercel.app/#contact" target="_blank" class="flex-1 text-center py-2 bg-[#FF9900] text-black font-bold rounded-lg hover:bg-[#e68900] transition text-sm">Site Ao Vivo</a>
+                            <a href="https://github.com/danyelgomess/Projeto-Final-de-Semestre-Site-Belch-Wear-" target="_blank" class="flex-1 text-center py-2 border border-[#FF9900] text-[#FF9900] font-bold rounded-lg hover:bg-[#FF9900] hover:text-black transition text-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LAB: Deploy Web Café -->
+                <div class="portfolio-item hide glass-card overflow-hidden group flex flex-col h-full" data-category="labs" data-aos="fade-up">
+                    <div class="relative h-48 sm:h-56 overflow-hidden bg-gray-900 cursor-pointer" onclick="openFullscreen('img/Deploy Web Café.jpg')">
+                        <img src="img/Deploy Web Café.jpg" alt="Deploy Web Café" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i data-feather="zoom-in" class="text-white w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 gradient-text">Deploy Web Café</h3>
+                        <p class="text-sm text-gray-400 mb-4 flex-grow">Hospedagem de site estático simulando um café através do Amazon S3. Configuração de buckets e permissões de acesso.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="tech-badge-sm">AWS S3</span>
+                            <span class="tech-badge-sm">Cloud Hosting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LAB: API em Python -->
+                <div class="portfolio-item hide glass-card overflow-hidden group flex flex-col h-full" data-category="labs" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-48 sm:h-56 overflow-hidden bg-gray-900 cursor-pointer" onclick="openFullscreen('img/API em Python.png')">
+                        <img src="img/API em Python.png" alt="API em Python" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i data-feather="zoom-in" class="text-white w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 gradient-text">Integração de API</h3>
+                        <p class="text-sm text-gray-400 mb-4 flex-grow">Desenvolvimento de script em Python para consumir, formatar e exibir dados externos via API REST.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="tech-badge-sm">Python</span>
+                            <span class="tech-badge-sm">APIs REST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LAB: CSV Python -->
+                <div class="portfolio-item hide glass-card overflow-hidden group flex flex-col h-full" data-category="labs" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-48 sm:h-56 overflow-hidden bg-gray-900 cursor-pointer" onclick="openFullscreen('img/CSV em python.png')">
+                        <img src="img/CSV em python.png" alt="Manipulação CSV em Python" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i data-feather="zoom-in" class="text-white w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 gradient-text">Data Parsing (CSV)</h3>
+                        <p class="text-sm text-gray-400 mb-4 flex-grow">Script Python desenvolvido para extração, leitura e processamento de dados estruturados em arquivos CSV.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="tech-badge-sm">Python</span>
+                            <span class="tech-badge-sm">Data Parsing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LAB: AWS CLI -->
+                <div class="portfolio-item hide glass-card overflow-hidden group flex flex-col h-full" data-category="labs" data-aos="fade-up">
+                    <div class="relative h-48 sm:h-56 overflow-hidden bg-gray-900 cursor-pointer" onclick="openFullscreen('img/Configurando AWS CLI.png')">
+                        <img src="img/Configurando AWS CLI.png" alt="Configuração AWS CLI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i data-feather="zoom-in" class="text-white w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2 gradient-text">Automação AWS CLI</h3>
+                        <p class="text-sm text-gray-400 mb-4 flex-grow">Setup completo e gerenciamento de recursos em nuvem através de linhas de comando para agilidade operacional.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="tech-badge-sm">AWS CLI</span>
+                            <span class="tech-badge-sm">Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Botão de Inspecionar Servidor com Alerta de Emergência -->
+            <div class="text-center mt-16 mb-8" data-aos="fade-up">
+                <p class="text-red-500 font-bold mb-4" style="animation: alertBlink 1.5s infinite alternate;">⚠️ Aviso do Sistema: Atividades suspeitas detectadas na rede.</p>
+                <button id="tacticalBtn" class="tactical-alert-btn px-8 py-4 rounded-lg font-bold transition shadow-xl" aria-label="Iniciar minigame de inspeção de servidor">
+                    <span class="alert-icon">🚨</span> ALERTA: ME AJUDE A PROTEGER O SERVIDOR! <span class="alert-icon">🚨</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Fullscreen Imagens Labs -->
+    <div id="fullscreenModal" class="fullscreen-modal">
+        <button class="close-modal" onclick="closeFullscreen()">×</button>
+        <img id="fullscreenImg" src="" alt="Imagem em tela cheia">
     </div>
-</section>
-<hr>
-    <!-- sessão Tênis -->
- <section class="testimonial" id="tenis">
-    <h2 class="section-title">Tênis</h2>
-    <div class="section-container">
-        <div class="testimonial-container swiper">
-            <div class="slide-wrapper">
-                <div class="card-list swiper-wrapper">
-                    
-                    <div class="card-item swiper-slide">
-                        <div class="imagem">
-                            <img src="images/AM-95.png" class="normal" alt="Air Max 95">
-                            <img src="images/AM-95-2.png" class="hover" alt="Air Max 95">
+
+    <section id="education" class="py-16 bg-black border-t border-b" style="border-color: #FF9900 !important;">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center" style="color: #FF9900;" data-aos="fade-up">Formação</h2>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="relative" data-aos="fade-up">
+                    <div class="absolute left-5 md:left-1/2 h-full w-0.5 bg-gray-600 transform -translate-x-1/2 hidden md:block"></div>
+
+                    <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-full md:w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full" style="background-color: #FF9900 !important;">
+                            <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
                         </div>
-                        <h3 class="user-name">Air Max 97</h3>
-                        <p class="user-thoughts">R$499,99</p>
-                        <button>COMPRAR</button>
+                        <div class="order-1 glass-card bg-gray-800 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 text-white">
+                            <h3 class="mb-1 font-bold text-lg" style="color: #FF9900;">Ensino Superior, Análise e Desenvolvimento de Sistemas</h3>
+                            <p class="text-sm" style="color: #FF9900;" class="flex items-center"><img src="img/uninove.png" alt="UNINOVE Logo" class="mr-2 h-10 w-auto" loading="lazy">UNINOVE - VILA-PRUDENTE</p>
+                            <p class="text-sm text-gray-400">Janeiro 2025 – Agosto de 2027 (Em andamento)</p>
+                        </div>
                     </div>
 
-                    <div class="card-item swiper-slide">
-                        <div class="imagem">
-                            <img src="images/ADI-2000.png" class="normal" alt="ADI 2000">
-                            <img src="images/ADI-2000-2.png" class="hover" alt="ADI 2000">
+                    <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline">
+                        <div class="order-1 glass-card bg-gray-800 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 text-white">
+                            <h3 class="mb-1 font-bold text-lg" style="color: #FF9900;">Fundamentos em Nuvem - AWS</h3>
+                            <p class="text-sm" style="color: #FF9900;" class="flex items-center">
+                                <img src="img/escola da nuvem.png" alt="Escola da Nuvem Logo" class="mr-2 h-16 w-auto" loading="lazy">
+                                Escola da Nuvem
+                            </p>
+                            <p class="text-sm text-gray-400">Setembro 2025 – Fevereiro 2026 </p>
                         </div>
-                        <h3 class="user-name">ADI 2000</h3>
-                        <p class="user-thoughts">R$399,99</p>
-                        <button>COMPRAR</button>
+                        <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full" style="background-color: #FF9900 !important;">
+                            <h1 class="mx-auto font-semibold text-lg text-white">2</h1>
+                        </div>
+                        <div class="order-1 w-full md:w-5/12"></div>
                     </div>
 
-                    <div class="card-item swiper-slide">
-                        <div class="imagem">
-                            <img src="images/TN-25TH.png" class="normal" alt="Air Max TN">
-                            <img src="images/TN-25TH-2.png" class="hover" alt="Air Max TN">
+                    <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-full md:w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full" style="background-color: #FF9900 !important;">
+                            <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
                         </div>
-                        <h3 class="user-name">Air Max TN</h3>
-                        <p class="user-thoughts">R$899,99</p>
-                        <button>COMPRAR</button>
+                        <div class="order-1 glass-card bg-gray-800 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 text-white">
+                            <h3 class="mb-1 font-bold text-lg" style="color: #FF9900;">Técnico em Eletroeletrônica</h3>
+                            <p class="text-sm" style="color: #FF9900;" class="flex items-center"><img src="img/icon.png" alt="SENAI Logo" class="mr-2 h-10 w-auto" loading="lazy">SENAI – A. Jacob Lafer</p>
+                            <p class="text-sm text-gray-400">Concluído em dezembro de 2024</p>
+                        </div>
                     </div>
 
-                    <div class="card-item swiper-slide">
-                        <div class="imagem">
-                            <img src="images/AM-95.png" class="normal" alt="Air Max 97">
-                            <img src="images/AM-95-2.png" class="hover" alt="Air Max 97">
+                    <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline">
+                        <div class="order-1 glass-card bg-gray-800 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 text-white">
+                            <h3 class="mb-1 font-bold text-lg" style="color: #FF9900;">Ensino Médio Completo</h3>
+                            <p class="text-sm" style="color: #FF9900;" class="flex items-center"><img src="img/icon2.png" alt="SESI Logo" class="logo-sesi" loading="lazy">SESI - Jardim Ana Maria, Santo André</p>
+                            <p class="text-sm text-gray-400">Concluído em dezembro de 2024</p>
                         </div>
-                        <h3 class="user-name">Air Max 97</h3>
-                        <p class="user-thoughts">R$499,99</p>
-                        <button>COMPRAR</button>
+                        <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full" style="background-color: #FF9900 !important;">
+                            <h1 class="mx-auto font-semibold text-lg text-white">4</h1>
+                        </div>
+                        <div class="order-1 w-full md:w-5/12"></div>
                     </div>
 
-                    <div class="card-item swiper-slide">
-                        <div class="imagem">
-                            <img src="images/ADI-2000.png" class="normal" alt="ADI 2000X">
-                            <img src="images/ADI-2000-2.png" class="hover" alt="ADI 2000X">
+                    <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-full md:w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full" style="background-color: #FF9900 !important;">
+                            <h1 class="mx-auto font-semibold text-lg text-white">5</h1>
                         </div>
-                        <h3 class="user-name">ADI 2000</h3>
-                        <p class="user-thoughts">R$399,99</p>
-                        <button>COMPRAR</button>
+                        <div class="order-1 glass-card bg-gray-800 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 text-white">
+                            <h3 class="mb-1 font-bold text-lg" style="color: #FF9900;">Curso Profissionalizante de Inglês</h3>
+                            <p class="text-sm" style="color: #FF9900;" class="flex items-center">
+                                <img src="img/cnaidiomas.png" alt="CNA Logo" class="mr-2 h-16 w-auto" loading="lazy">
+                                CNA Idiomas – São Mateus
+                            </p>
+                            <p class="text-sm text-gray-400">Janeiro 2015 – Dezembro 2023</p>
+                        </div>
                     </div>
 
-                    <div class="card-item swiper-slide">
-                        <div class="imagem">
-                            <img src="images/TN-25TH.png" class="normal" alt="Air Max TN">
-                            <img src="images/TN-25TH-2.png" class="hover" alt="Air Max TN ">
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div data-aos="fade-up">
+                        <h3 class="text-xl font-semibold mb-6 gradient-text">Certificações</h3>
+                        <div class="glass-card bg-gray-800 p-6 rounded-xl shadow-sm text-white">
+                            <div class="space-y-4">
+
+                                <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/escola da nuvem.png" alt="Escola da Nuvem Logo" class="logo-EDN mr-6 h-16 w-auto flex-shrink-0" loading="lazy">
+                                    <a href="https://imgur.com/a/Yzewu1w" target="_blank" aria-label="Ver certificado Escola da Nuvem" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">Escola da Nuvem <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">Cloud Computing & IA | Concluído em Fevereiro de 2026</p>
+                                        <p class="text-xs text-gray-500 mt-1">Ajudando além de obter conhecimentos sobre programação em nuvem com o programa AWS re/Start, também houve colaboração no segundo módulo com o ensinamento de Inteligencia Aritificial, na Escola da Nuvem realizei projetos e também contribuições com o meu desenvolvimento profissional.</p>
+                                    </a>
+                                </div>
+
+                                <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/Developer Associate.png" alt="AWS Logo" class="logo-aws mr-4 flex-shrink-0" loading="lazy">
+                                    <a href="https://www.credly.com/badges/1729edb7-9a80-4392-9898-daf967e22892/public_url" target="_blank" aria-label="Ver certificado AWS Developer - Associate" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">AWS Certified Developer - Associate <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">AWS | Concluído em Julho de 2026</p>
+                                        <p class="text-xs text-gray-500 mt-1"> Valida conhecimentos em fundamentos de nuvem, serviços essenciais, segurança, arquitetura e modelo de custos. Ela fornece uma base sólida para entender o ecossistema da AWS e dar suporte a soluções em nuvem corporativas.</p>
+                                    </a>
+                                </div>
+
+                              <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/Cloud Practicioner.png" alt="AWS Logo" class="logo-aws mr-4 flex-shrink-0" loading="lazy">
+                                    <a href="https://www.credly.com/badges/defd742b-8a9c-4c61-9187-cbed69cf2a08/public_url" target="_blank" aria-label="Ver certificado AWS Cloud Practitioner" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">AWS Certified Cloud Practitioner <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">AWS | Concluído em Dezembro de 2025</p>
+                                        <p class="text-xs text-gray-500 mt-1">Com conhecimentos em fundamentos de computação em nuvem, serviços essenciais da AWS, segurança, arquitetura e modelo de custos. Base sólida para atuação em ambientes cloud e suporte a soluções em nuvem.</p>
+                                    </a>
+                                </div>
+
+                              <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/aws (3).png" alt="AWS Logo" class="logo-aws mr-4 flex-shrink-0" loading="lazy">
+                                    <a href="https://www.credly.com/badges/99a9fbe2-09d4-47a9-a467-bc9de2e322c7/public_url" target="_blank" aria-label="Ver certificado AWS Re/Start Graduate" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">AWS Re/Start Graduate <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">AWS Academy Graduate | Concluído em Dezembro de 2025</p>
+                                        <p class="text-xs text-gray-500 mt-1">Com formação prática em computação em nuvem, Linux, redes, segurança e fundamentos de DevOps. Preparado para atuar em ambientes cloud, suporte técnico e operações em nuvem.</p>
+                                    </a>
+                                </div>
+
+                              <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/cnaidiomas.png" alt="CNA Logo" class="mr-6 h-16 w-auto flex-shrink-0" loading="lazy">
+                                    <a href="https://imgur.com/a/cmL76e5" target="_blank" aria-label="Ver certificado Inglês CNA" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">Inglês <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">CNA | 2015 a 2023</p>
+                                        <p class="text-xs text-gray-500 mt-1">Com formação em inglês, com foco em comunicação técnica e profissional.</p>
+                                    </a>
+                                </div>
+
+                              <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/icon.png" alt="SENAI Logo" class="mr-4 h-12 w-auto flex-shrink-0" loading="lazy">
+                                    <a href="https://www.sp.senai.br/consulta-certificado?qrcode=00029068/7186602" target="_blank" aria-label="Ver certificado Desvendando a Blockchain" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">Desvendando a Blockchain - 20h <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">SENAI A. Jacob Lafer | Concluído em outubro de 2024</p>
+                                        <p class="text-xs text-gray-500 mt-1">Definição e componentes da Blockchain, análise de funcionamento e aplicações práticas.</p>
+                                    </a>
+                                </div>
+
+                              <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/icon.png" alt="SENAI Logo" class="mr-4 h-12 w-auto flex-shrink-0" loading="lazy">
+                                    <a href="https://www.sp.senai.br/consulta-certificado?qrcode=00029075/7186602" target="_blank" aria-label="Ver certificado Web 3.0" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">Web 3.0 - 20h <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">SENAI A. Jacob Lafer | 04/03/2024 a 31/10/2024</p>
+                                        <p class="text-xs text-gray-500 mt-1">História da Internet, Web Semântica, Digital Twin, DAO, DApps, Metaverso e Realidades Virtuais.</p>
+                                    </a>
+                                </div>
+
+                              <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/icon.png" alt="SENAI Logo" class="mr-4 h-12 w-auto flex-shrink-0" loading="lazy">
+                                    <a href="https://www.sp.senai.br/consulta-certificado?qrcode=00021791/7186602" target="_blank" aria-label="Ver certificado Desvendando o 5G" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">Desvendando o 5G - 15h <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">SENAI A. Jacob Lafer | 02/05/2023 a 26/05/2023</p>
+                                        <p class="text-xs text-gray-500 mt-1">Histórico das gerações celulares, elementos do 5G, arquiteturas e status de implantação.</p>
+                                    </a>
+                                </div>
+
+                              <div class="border-b pb-4 border-gray-600 flex items-start">
+                                    <img src="img/icon.png" alt="SENAI Logo" class="mr-4 h-12 w-auto flex-shrink-0" loading="lazy">
+                                    <a href="https://www.sp.senai.br/consulta-certificado?qrcode=00021789/7186602" target="_blank" aria-label="Ver certificado LGPD" class="flex-grow">
+                                        <h4 class="font-semibold" style="color: #FF9900;">Privacidade e Proteção de Dados (LGPD) - 4h <span class="text-xs" style="color: #FF9900;">(Verificado)</span></h4>
+                                        <p class="text-sm text-gray-400">SENAI A. Jacob Lafer | 02/05/2023 a 26/05/2023</p>
+                                        <p class="text-xs text-gray-500 mt-1">Direitos dos titulares, deveres das empresas, governança de dados e sanções.</p>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <h3 class="mt-6 text-gray-300 text-sm italic">Clique nas minhas Certificações para verificar suas Credenciais!</h3>
                         </div>
-                        <h3 class="user-name">Air Max TN1</h3>
-                        <p class="user-thoughts">R$899,99</p>
-                        <button>COMPRAR</button>
                     </div>
 
                 </div>
             </div>
-
-            <!-- Botões e Paginação -->
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
         </div>
-    </div>
-</section>
-<hr>
-    <!-- sessão da Galeria -->
-    <section class="gallery" id="Galeria">
-      <h2 class="section-title">Galeria</h2>
-      <div class="section-container">
-        <div class="gallery-list">
-          <div class="gallery-items">
-            <img src="images/fit-1 (1).jpg" alt="Imagem Galeria" class="gallery-image">
-          </div>
-          <div class="gallery-items">
-            <img src="images/fit-2.jpg" alt="Imagem Galeria" class="gallery-image">
-          </div>
-          <div class="gallery-items">
-            <img src="images/fit-3.jpg" alt="Imagem Galeria" class="gallery-image">
-          </div>
-          <div class="gallery-items">
-            <img src="images/fit-4.jpg" alt="Imagem Galeria" class="gallery-image">
-          </div>
-          <div class="gallery-items">
-            <img src="images/fit-5.jpg" alt="Imagem Galeria" class="gallery-image">
-          </div>
-          <div class="gallery-items">
-            <img src="images/fit-6.jpg" alt="Imagem Galeria" class="gallery-image">
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- sessão contato -->
-    <section class="contact" id="contact">
-      <h2 class="section-title">Entre em Contato</h2>
-      <div class="section-container">
-        <div class="contact-container">
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="fa-solid fa-location-crosshairs"></i>
-              <p>Av. Professor Luiz Ignácio Anhaia Mello, 1363 - Vila Prudente, São Paulo - SP, 03155-000</p>
-            </div>
-            <div class="contact-item">
-              <i class="fa-regular fa-envelope"></i>
-              <p>belchwear01@gmail.com</p>
-            </div>
-            <div class="contact-item">
-              <i class="fa-solid fa-phone"></i>
-              <p>(xx) xxxxx-xxxx</p>
-            </div>
-            <div class="contact-item">
-              <i class="fa-regular fa-clock"></i>
-              <p>Segunda - Sexta: 8:00 AM - 6:00 PM</p>
-            </div>
-            <div class="contact-item">
-              <i class="fa-regular fa-clock"></i>
-              <p>Sábado: 10:00 AM - 3:00 PM</p>
-            </div>
-            <div class="contact-item">
-              <i class="fa-regular fa-clock"></i>
-              <p>Domingo: Fechado</p>
-            </div>
-            <div class="contact-item">
-            </div>
-          </div>
+    <section id="contact" class="py-16 bg-black border-t border-b" style="border-color: #FF9900 !important; padding-top: 5rem;">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center" style="color: #FF9900;" data-aos="fade-up">Contato</h2>
 
-          <div class="contact-form">
-            <form action="mailto:belchwear01@gmail.com" method="POST" enctype="text/plain">
-              <input type="text" placeholder="Nome" required>
-              <input type="email" placeholder="Email" required>
-              <textarea placeholder="Escreva sua Mensagem" required></textarea>
-              <button type="submit" class="button form-button">Enviar</button>
-            </form>
-          </div>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <div class="glass-card bg-gray-800 p-8 rounded-xl shadow-sm h-full text-white">
+                        <h3 class="text-xl font-semibold mb-6 gradient-text">Informações</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-feather="phone" class="mr-4 mt-1" style="color: #FF9900;"></i>
+                                <div>
+                                    <h4 class="font-medium" style="color: #FF9900;">Telefone</h4>
+                                    <p class="text-gray-400"><a href="tel:55 (11) 97760-5383" target="_blank" aria-label="Ligar para +55 11 97760-5383">+55 11 97760-5383</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="mail" class="mr-4 mt-1" style="color: #FF9900;"></i>
+                                <div>
+                                    <h4 class="font-medium" style="color: #FF9900;">Email</h4>
+                                    <p class="text-gray-400"><a href="mailto:danyelmoreira99@gmail.com" target="_blank" aria-label="Enviar email para danyelmoreira99@gmail.com">danyelmoreira99@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="linkedin" class="mr-4 mt-1" style="color: #FF9900;"></i>
+                                <div>
+                                    <h4 class="font-medium" style="color: #FF9900;">LinkedIn</h4>
+                                    <p class="text-gray-400"><a href="https://www.linkedin.com/in/danyelmoreira/" target="_blank" aria-label="Perfil no LinkedIn">https://www.linkedin.com/in/danyelmoreira/</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="github" class="mr-4 mt-1" style="color: #FF9900;"></i>
+                                <div>
+                                    <h4 class="font-medium" style="color: #FF9900;">GitHub</h4>
+                                    <p class="text-gray-400"><a href="https://github.com/danyelgomess" target="_blank" aria-label="Perfil no GitHub">https://github.com/danyelgomess</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="map-pin" class="mr-4 mt-1" style="color: #FF9900;"></i>
+                                <div>
+                                    <h4 class="font-medium" style="color: #FF9900;">Localização</h4>
+                                    <p class="text-gray-400">São Paulo, Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-gray-400 text-sm italic">E aí, pessoal do recrutamento! Se você achou interessante o que viu por aqui, dá uma olhada no meu LinkedIn para conversarmos sobre possíveis oportunidades e também no meu GitHub para ver mais projetos de código que desenvolvi ao longo da minha carreira. Que tal trocarmos umas ideias?</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="glass-card bg-gray-800 p-8 rounded-xl shadow-sm text-white">
+                        <h3 class="text-xl font-semibold mb-6 gradient-text">Envie uma Mensagem</h3>
+                        <form action="https://formspree.io/f/xdalnbeq" method="POST" class="space-y-6">
+                            <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
+                            <input type="hidden" name="_next" value="https://danyelgomess.github.io/Portflio-Danyel-Moreira/?obrigado">
+
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2" style="color: #FF9900;">Nome</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 focus:border-[#FF9900] outline-none" placeholder="Seu nome">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2" style="color: #FF9900;">Email</label>
+                                <input type="email" id="email" name="_replyto" required class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 focus:border-[#FF9900] outline-none" placeholder="seu@email.com">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2" style="color: #FF9900;">Mensagem</label>
+                                <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 focus:border-[#FF9900] outline-none" placeholder="Sua mensagem..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 px-6 bg-[#FF9900] text-black font-bold rounded-lg hover:bg-[#e68900] transition btn-glow">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Footer  -->
-    <footer class="footer">
-      <div class="section-container">
-        <div class="footer-section">
-          <div class="footer-copyright">
-            <p>© 2025 Danyel Moreira</p>
-          </div>
-          <div class="footer-social-media">
-            <div class="social-icon">
-              <a href="https://www.instagram.com/gomesnyd"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://github.com/danyelgomess"><i class="fa-brands fa-github"></i></a>
+    <footer class="bg-black text-gray-400 py-8 border-t" style="border-color: #FF9900 !important;">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-bold gradient-text">Danyel Moreira</h2>
+                    <p class="text-gray-500">Dev Ops - Full Stack</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/danyelmoreira/" target="_blank" class="text-gray-400 hover:text-yellow-500 transition" aria-label="LinkedIn">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://github.com/danyelgomess" target="_blank" class="text-gray-400 hover:text-yellow-500 transition" aria-label="GitHub">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="mailto:danyelmoreira99@gmail.com" target="_blank" class="text-gray-400 hover:text-yellow-500 transition" aria-label="Email">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="footer-policies">
-            <a href="#">Políticas de Privacidade</a>
-          </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2026 Danyel. Todos os direitos reservados.</p>
+            </div>
         </div>
-      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
+    <a href="#" class="back-to-top fixed bottom-8 right-8 p-3 rounded-full shadow-lg transition z-50" style="background-color: #FF9900;" aria-label="Voltar ao topo">
+        <i data-feather="arrow-up"></i>
+    </a>
 
+    <!-- Overlay Terminal -->
+    <div id="terminalOverlay" class="terminal-overlay">
+        <div class="terminal-window">
+            <button class="terminal-close-btn" id="terminalCloseBtn">×</button>
+            <div class="terminal-titlebar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">>_ Terminal AWS - root@danyel:~</span>
+            </div>
+            <div class="terminal-body" id="terminalBody"></div>
+            <div class="terminal-input-line">
+                <span class="prompt">root@danyel:~$</span>
+                <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" placeholder="Digite um comando...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay Minigame -->
+    <div id="tacticalOverlay" class="tactical-overlay"></div>
+    <div id="tacticalVictoryModal" class="tactical-victory-modal">
+        <div class="tactical-victory-content">
+            <button class="tactical-victory-close" id="tacticalVictoryClose">×</button>
+            <h3>Servidor Seguro. Acesso Liberado.</h3>
+            <div>
+                <a href="https://w.app/29t7du" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+                <a href="curriculo.pdf" download="curriculo.pdf" class="btn-cv">📥 Currículo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+        feather.replace();
+
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) backToTop.style.display = 'block';
+            else backToTop.style.display = 'none';
+        });
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        function openFullscreen(src) {
+            document.getElementById('fullscreenImg').src = src;
+            document.getElementById('fullscreenModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFullscreen() {
+            document.getElementById('fullscreenModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        /* Lógica de Filtro dos Projetos */
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    if(item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hide');
+                        // Retrigger animation
+                        item.style.animation = 'none';
+                        item.offsetHeight; /* trigger reflow */
+                        item.style.animation = null; 
+                    } else {
+                        item.classList.add('hide');
+                    }
+                });
+                feather.replace();
+            });
+        });
+
+        // Inicializa o filtro removendo os labs da tela inicialmente
+        document.querySelector('.filter-btn.active').click();
+
+        /* ===== Terminal AWS Logic ===== */
+        (function() {
+            var terminalBtn = document.getElementById('terminalBtn');
+            var terminalOverlay = document.getElementById('terminalOverlay');
+            var terminalBody = document.getElementById('terminalBody');
+            var terminalInput = document.getElementById('terminalInput');
+            var terminalCloseBtn = document.getElementById('terminalCloseBtn');
+
+            function terminalPrint(text, className) {
+                var line = document.createElement('div');
+                line.className = className || 'terminal-output';
+                line.textContent = text;
+                terminalBody.appendChild(line);
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
+
+            function clearTerminal() { terminalBody.innerHTML = ''; }
+
+            function addInputLine() {
+                var inputLine = document.createElement('div');
+                inputLine.className = 'terminal-input-line';
+                inputLine.innerHTML = '<span class="prompt">root@danyel:~$</span>';
+                terminalBody.appendChild(inputLine);
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
+
+            function printHelp() {
+                terminalPrint('SISTEMA INICIADO. Comandos disponíveis:');
+                terminalPrint('- help (ou comandos)');
+                terminalPrint('- whoami');
+                terminalPrint('- projetos');
+                terminalPrint('- aws ec2 describe-instances');
+                terminalPrint('- clear');
+                terminalPrint('');
+            }
+
+            function handleCommand(cmd) {
+                var command = cmd.trim().toLowerCase();
+                if (command === 'whoami') {
+                    terminalPrint('root'); terminalPrint('');
+                    terminalPrint('DevOps Engineer | AWS Certified Developer - Associate');
+                    terminalPrint('Especializado em cloud computing, automação e desenvolvimento full stack.');
+                } else if (command === 'ls projetos' || command === 'projetos') {
+                    terminalPrint('Barbearia Sants (2026) - Sistema de gerenciamento de agendamentos com Supabase, TypeScript e JavaScript.');
+                    terminalPrint('AgileSUS (2026) - Sistema de filas para SUS com AWS SQS, Lambda, DynamoDB, API Gateway e CloudWatch.'); terminalPrint('');
+                    terminalPrint('Belch Wear (2025) - E-commerce de roupas streetwear com HTML5, CSS3 e JavaScript.');
+                    terminalPrint('Portfolio (2025) - Portfólio pessoal com HTML5, CSS3, JavaScript, TailwindCSS e AOS.js.'); terminalPrint('');
+                } else if (command === 'aws ec2 describe-instances') {
+                    terminalPrint('Instância ativa: Atualmente processando o 3º semestre de Análise e Desenvolvimento de Sistemas.');
+                } else if (command === 'clear') {
+                    clearTerminal();
+                    printHelp();
+                } else if (command === 'help' || command === 'comandos') {
+                    printHelp();
+                } else if (command === '') {
+                } else {
+                    terminalPrint('comando: ' + cmd, 'terminal-error');
+                    terminalPrint('Comando não reconhecido. Veja a lista abaixo:', 'terminal-error');
+                    terminalPrint('');
+                    printHelp();
+                }
+            }
+
+            function openTerminal() {
+                terminalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                clearTerminal();
+                printHelp();
+                addInputLine();
+                terminalInput.value = '';
+                terminalInput.focus();
+            }
+
+            function closeTerminal() {
+                terminalOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            if(terminalBtn) terminalBtn.addEventListener('click', openTerminal);
+            if(terminalCloseBtn) terminalCloseBtn.addEventListener('click', closeTerminal);
+            if(terminalOverlay) terminalOverlay.addEventListener('click', function(e) { if (e.target === this) closeTerminal(); });
+
+            if(terminalInput) {
+                terminalInput.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        var cmd = terminalInput.value;
+                        var inputLine = terminalBody.querySelector('.terminal-input-line:last-child');
+                        if (inputLine) {
+                            var promptSpan = inputLine.querySelector('.prompt');
+                            if (promptSpan) promptSpan.textContent = 'root@danyel:~$ ' + cmd;
+                        }
+                        handleCommand(cmd);
+                        addInputLine();
+                        terminalInput.value = '';
+                    } else if (e.key === 'Escape') {
+                        closeTerminal();
+                    }
+                });
+            }
+        })();
+
+        /* ===== Tactical Minigame Logic ===== */
+        (function() {
+            const tacticalBtn = document.getElementById('tacticalBtn');
+            const tacticalOverlay = document.getElementById('tacticalOverlay');
+            const tacticalVictoryModal = document.getElementById('tacticalVictoryModal');
+            const tacticalVictoryClose = document.getElementById('tacticalVictoryClose');
+
+            let gameActive = false;
+            let score = 0;
+            let timeLeft = 15;
+            let gameInterval = null;
+            let spawnInterval = null;
+            let counterEl = null;
+
+            function createCounter() {
+                if (counterEl) counterEl.remove();
+                counterEl = document.createElement('div');
+                counterEl.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2147483647; color: #FF9900; background: rgba(0,0,0,0.9); padding: 10px 25px; border: 2px solid #FF9900; border-radius: 8px; font-family: monospace; font-size: 18px; font-weight: bold; pointer-events: none; text-align: center;';
+                counterEl.innerHTML = `Trojans eliminados: <span id="tScore">0</span>/5 <br> Tempo: <span id="tTime">15</span>s`;
+                document.body.appendChild(counterEl);
+            }
+
+            function updateCounter() {
+                const s = document.getElementById('tScore');
+                const t = document.getElementById('tTime');
+                if (s) s.textContent = score;
+                if (t) t.textContent = timeLeft;
+            }
+
+            function spawnTarget() {
+                if (!gameActive) return;
+
+                const target = document.createElement('div');
+                target.className = 'trojan-bug';
+                
+                const maxX = window.innerWidth - 80;
+                const maxY = window.innerHeight - 80;
+                const x = Math.max(20, Math.random() * maxX);
+                const y = Math.max(80, Math.random() * maxY);
+
+                target.style.cssText = `
+                    position: fixed; left: ${x}px; top: ${y}px; width: 60px; height: 60px;
+                    background: radial-gradient(circle, #ff3333, #660000); border-radius: 50%;
+                    z-index: 2147483647; cursor: crosshair; box-shadow: 0 0 20px #ff0000;
+                    pointer-events: auto; transition: transform 0.2s; animation: trojanGlitch 0.4s infinite alternate;
+                `;
+
+                target.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (!gameActive) return;
+                    
+                    score++;
+                    updateCounter();
+                    target.style.transform = 'scale(0)';
+                    setTimeout(() => target.remove(), 200);
+
+                    if (score >= 5) endGame(true);
+                });
+
+                document.body.appendChild(target);
+                setTimeout(() => { if (target.parentNode) { target.style.transform = 'scale(0)'; setTimeout(() => target.remove(), 200); } }, 2000);
+            }
+
+            function startGame() {
+                if (gameActive) return;
+                gameActive = true; score = 0; timeLeft = 15;
+
+                tacticalOverlay.classList.add('active');
+                createCounter(); updateCounter();
+                document.body.style.cursor = 'crosshair';
+
+                gameInterval = setInterval(() => {
+                    timeLeft--; updateCounter();
+                    if (timeLeft <= 0) endGame(false);
+                }, 1000);
+
+                spawnInterval = setInterval(() => { spawnTarget(); }, 1200);
+                spawnTarget(); 
+            }
+
+            function endGame(won) {
+                gameActive = false;
+                clearInterval(gameInterval); clearInterval(spawnInterval);
+
+                document.querySelectorAll('.trojan-bug').forEach(el => el.remove());
+                if (counterEl) counterEl.remove();
+
+                tacticalOverlay.classList.remove('active');
+                document.body.style.cursor = 'default';
+
+                if (won) {
+                    tacticalVictoryModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    alert('FALHA CRÍTICA: O servidor foi invadido! Tente novamente.');
+                }
+            }
+
+            if (tacticalBtn) tacticalBtn.addEventListener('click', startGame);
+            if (tacticalVictoryClose) tacticalVictoryClose.addEventListener('click', () => { tacticalVictoryModal.classList.remove('active'); document.body.style.overflow = 'auto'; });
+        })();
+    </script>
+</body>
 </html>
